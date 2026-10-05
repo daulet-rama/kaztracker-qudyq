@@ -1,0 +1,11 @@
+import{c as h,at as p,au as y,av as d,as as m,n as g}from"./index-CUqTcV0Z.js";/**
+ * @license lucide-react v1.50.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const u={name:"git-branch",size:24,node:[["path",{d:"M15 6a9 9 0 0 0-9 9V3",key:"1cii5b"}],["circle",{cx:"18",cy:"6",r:"3",key:"1h7g24"}],["circle",{cx:"6",cy:"18",r:"3",key:"fqmcym"}]]};u.node;const T=h(u);/**
+ * @license lucide-react v1.50.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const f={name:"phone-call",size:24,node:[["path",{d:"M13 2a9 9 0 0 1 9 9",key:"1itnx2"}],["path",{d:"M13 6a5 5 0 0 1 5 5",key:"11nki7"}],["path",{d:"M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",key:"9njp5v"}]]};f.node;const w=h(f),M=[15,30,60,120],o=60,S=["telegram","whatsapp","sms","call"];function s(){const a={};for(const e of m)a[e.id]={...e.channels};return a}function I(a){return M.includes(a)}const k={getItem:a=>{try{return window.localStorage.getItem(a)}catch{return null}},setItem:(a,e)=>{try{window.localStorage.setItem(a,e)}catch{}},removeItem:a=>{try{window.localStorage.removeItem(a)}catch{}}},i=a=>typeof a=="object"&&a!==null&&!Array.isArray(a);function A(a){const e=s();if(!i(a))return e;for(const n of m){const t=a[n.id];if(i(t))for(const c of S)typeof t[c]=="boolean"&&(e[n.id][c]=t[c])}return e}const l=p()(y((a,e)=>({channels:s(),escalationMin:o,toggleChannel:(n,t)=>{const c=!e().channels[n][t];return a(r=>({channels:{...r.channels,[n]:{...r.channels[n],[t]:c}}})),c},setEscalationMin:n=>a({escalationMin:n}),resetTeam:()=>a({channels:s(),escalationMin:o})}),{name:"qudyq-team-v1",version:1,storage:d(()=>k),partialize:a=>({channels:a.channels,escalationMin:a.escalationMin}),merge:(a,e)=>{if(!i(a))return e;const n=a.escalationMin;return{...e,channels:A(a.channels),escalationMin:typeof n=="number"&&I(n)?n:o}}}));g.subscribe((a,e)=>{a.tickCount===0&&a.lastTick!==e.lastTick&&(l.getState().resetTeam(),l.persist.clearStorage())});export{S as C,M as E,T as G,w as P,I as i,l as u};
